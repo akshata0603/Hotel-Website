@@ -446,7 +446,7 @@ table{
         background:
         linear-gradient(rgba(0,0,0,.5),
         rgba(0,0,0,.5)),
-        url("images/hotel.jpg");
+        url("hotel.jpg");
         background-size:cover;
         background-position:center;
     }
@@ -455,7 +455,7 @@ table{
         background:
         linear-gradient(rgba(0,0,0,.5),
         rgba(0,0,0,.5)),
-        url("images/hotel2.jpg");
+        url("hotel2.jpg");
         background-size:cover;
         background-position:center;
     }
@@ -464,7 +464,7 @@ table{
         background:
         linear-gradient(rgba(0,0,0,.5),
         rgba(0,0,0,.5)),
-        url("images/hotel3.jpg");
+        url("hotel3.jpg");
         background-size:cover;
         background-position:center;
     }
@@ -473,7 +473,7 @@ table{
         background:
         linear-gradient(rgba(0,0,0,.5),
         rgba(0,0,0,.5)),
-        url("images/hotel4.jpg");
+        url("hotel4.jpg");
         background-size:cover;
         background-position:center;
     }
@@ -482,7 +482,7 @@ table{
         background:
         linear-gradient(rgba(0,0,0,.5),
         rgba(0,0,0,.5)),
-        url("images/hotel1.jpg");
+        url("hotel1.jpg");
         background-size:cover;
         background-position:center;
     }
