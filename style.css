@@ -1,0 +1,489 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f5f5f5;
+    line-height:1.6;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    background:linear-gradient(90deg,#000,#444);
+    color:white;
+    padding:20px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.logo{
+    font-size:32px;
+    font-weight:bold;
+    color:gold;
+    animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        text-shadow:0 0 5px gold;
+    }
+    to{
+        text-shadow:
+        0 0 10px gold,
+        0 0 20px orange,
+        0 0 30px gold;
+    }
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-size:18px;
+    position:relative;
+    transition:0.4s;
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    width:0;
+    height:2px;
+    background:gold;
+    transition:0.4s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+nav a:hover{
+    color:gold;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero{
+    height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    position:relative;
+    animation:slider 60s infinite;
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    background:rgba(0,0,0,0.6);
+    padding:40px;
+    border-radius:20px;
+    color:white;
+
+    animation:
+    fadeIn 2s,
+    floating 4s infinite ease-in-out;
+}
+
+.hero-content h1{
+    font-size:60px;
+    margin-bottom:20px;
+    text-shadow:3px 3px 10px black;
+}
+
+.hero-content p{
+    font-size:22px;
+    margin-bottom:25px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn,
+button{
+    background:linear-gradient(45deg,#ff9800,#ff5722);
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:bold;
+    transition:0.5s;
+}
+
+.btn{
+    text-decoration:none;
+    display:inline-block;
+}
+
+.btn:hover,
+button:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 20px rgba(255,152,0,0.8);
+}
+
+/* =========================
+   SECTION TITLES
+========================= */
+
+.title{
+    text-align:center;
+    font-size:42px;
+    color:#222;
+    margin:50px 0 30px;
+    position:relative;
+}
+
+.title::after{
+    content:"";
+    display:block;
+    width:120px;
+    height:4px;
+    background:gold;
+    margin:10px auto;
+    border-radius:10px;
+}
+
+/* =========================
+   CARD CONTAINER
+========================= */
+
+.cards{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:30px;
+    padding:20px;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.card{
+    width:320px;
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    transition:all 0.5s ease;
+}
+
+.card:hover{
+    transform:
+    translateY(-15px)
+    scale(1.03);
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,0.25);
+}
+
+/* =========================
+   CARD IMAGES
+========================= */
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    transition:0.6s;
+}
+
+.card:hover img{
+    transform:scale(1.15);
+}
+
+/* =========================
+   CARD CONTENT
+========================= */
+
+.card-content{
+    padding:20px;
+    transition:0.5s;
+}
+
+.card:hover .card-content{
+    background:
+    linear-gradient(
+    135deg,
+    #fff8dc,
+    #ffe082);
+}
+
+.card-content h3{
+    margin-bottom:10px;
+    color:#222;
+}
+
+.card-content p{
+    color:#555;
+}
+
+.price{
+    color:#e91e63;
+    font-size:24px;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+/* =========================
+   TABLE
+========================= */
+
+table{
+    width:90%;
+    margin:30px auto;
+    border-collapse:collapse;
+    background:white;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+th{
+    background:#222;
+    color:white;
+}
+
+th,td{
+    border:1px solid #ddd;
+    padding:15px;
+    text-align:center;
+}
+
+tr:hover{
+    background:#fff8dc;
+}
+
+/* =========================
+   FORMS
+========================= */
+
+form{
+    width:70%;
+    margin:30px auto;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.15);
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    outline:none;
+    border-color:gold;
+    box-shadow:0 0 10px gold;
+}
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+    padding:20px;
+}
+
+.gallery img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:15px;
+    transition:0.6s;
+}
+
+.gallery img:hover{
+    transform:
+    scale(1.08)
+    rotate(2deg);
+
+    box-shadow:
+    0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:40px;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes floating{
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+    gap:15px;
+    text-align:center;
+}
+
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.hero-content{
+    width:90%;
+}
+
+.hero-content h1{
+    font-size:35px;
+}
+
+.hero-content p{
+    font-size:18px;
+}
+
+.title{
+    font-size:30px;
+}
+
+.cards{
+    flex-direction:column;
+    align-items:center;
+}
+
+.card{
+    width:90%;
+}
+
+form{
+    width:90%;
+}
+
+table{
+    width:95%;
+    font-size:14px;
+}
+
+}
+@keyframes slider{
+
+    0%{
+        background:
+        linear-gradient(rgba(0,0,0,.5),
+        rgba(0,0,0,.5)),
+        url("images/hotel.jpg");
+        background-size:cover;
+        background-position:center;
+    }
+
+    25%{
+        background:
+        linear-gradient(rgba(0,0,0,.5),
+        rgba(0,0,0,.5)),
+        url("images/hotel2.jpg");
+        background-size:cover;
+        background-position:center;
+    }
+
+    50%{
+        background:
+        linear-gradient(rgba(0,0,0,.5),
+        rgba(0,0,0,.5)),
+        url("images/hotel3.jpg");
+        background-size:cover;
+        background-position:center;
+    }
+
+    75%{
+        background:
+        linear-gradient(rgba(0,0,0,.5),
+        rgba(0,0,0,.5)),
+        url("images/hotel4.jpg");
+        background-size:cover;
+        background-position:center;
+    }
+
+    100%{
+        background:
+        linear-gradient(rgba(0,0,0,.5),
+        rgba(0,0,0,.5)),
+        url("images/hotel1.jpg");
+        background-size:cover;
+        background-position:center;
+    }
+}
